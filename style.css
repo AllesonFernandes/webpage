@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-areas:
+     "header header"
+     "info template"
+     "footer footer";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header{
+    grid-area: header;
+    background: #333;
+    color: white;
+    padding: 20px;
+    
+}
+
+.itens-inicio {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.info {
+  grid-area: info;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.template {
+  grid-area: template;
+  background: #eaeaea;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.container-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 10px;
+    
+}
+
+.template-depressao,
+.template-ansiedade {
+    background: #eaeaea;
+    padding: 20px;
+
+}
+
+.container-minicard-depressao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.minicard-sintomas-depressao {
+    background: #949292;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    overflow: hidden; /* Se quiser cortar excessos */
+}
+
+.img-minicard-sintomas-depressao {
+    width: 100%;
+    height: 60%; /* ou px: tipo 120px */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
