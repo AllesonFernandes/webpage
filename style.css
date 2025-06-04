@@ -55,6 +55,8 @@ footer {
   text-align: center;
 }
 
+/* asides e cards página inicial */
+
 .container-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,8 +64,6 @@ footer {
   padding: 10px;
     
 }
-
-/* asides e cards página inicial */
 
 .titulo{
   font-size: 2em;
@@ -133,4 +133,42 @@ table {
 table th, table td {
   border-bottom: 1px solid;
   padding: 5px 23px 5px 23px;
+}
+
+/* estilização da página sobre */
+
+.container-sobre {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "aside-img-sobre aside-info-sobre";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+
+.aside-img-sobre {
+  grid-area: aside-img-sobre;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+}
+
+.aside-img-sobre > * {
+  border-radius: 15px;
+}
+
+.aside-info-sobre {
+  grid-area: aside-info-sobre;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid blue;
+}
+
+.aside-info-sobre > * {
+  padding-bottom: 15px;
 }
