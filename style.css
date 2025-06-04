@@ -14,11 +14,16 @@
 }
 
 header{
-    grid-area: header;
-    background: #333;
-    color: white;
-    padding: 20px;
-    
+  grid-area: header;
+  background: #333;
+  color: white;
+  padding: 20px;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .itens-inicio {
@@ -51,42 +56,81 @@ footer {
 }
 
 .container-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 10px;
     
+}
+
+/* asides e cards página inicial */
+
+.titulo{
+  font-size: 2em;
+}
+
+.card-descricao-depressao > *, 
+.card-descricao-ansiedade > *,
+.descricao-site > * {
+  padding-bottom: 15px;
 }
 
 .template-depressao,
 .template-ansiedade {
-    background: #eaeaea;
-    padding: 20px;
+  background: #eaeaea;
+  padding: 20px;
 
 }
 
-.container-minicard-depressao {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 800px;
-    gap: 15px;
-    padding-top: 10px;
+.container-minicard-depressao,
+.container-minicard-ansiedade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+  gap: 15px;
+  padding-top: 10px;
 }
 
-.minicard-sintomas-depressao {
-    background: #949292;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 8px;
-    overflow: hidden; /* Se quiser cortar excessos */
+.minicard-sintomas-depressao,
+.minicard-sintomas-ansiedade {
+  background: #949292;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.img-minicard-sintomas-depressao {
-    width: 100%;
-    height: 60%; /* ou px: tipo 120px */
-    object-fit: cover;
-    border-radius: 4px;
+.img-minicard-sintomas-depressao,
+.img-minicard-sintomas-ansiedade {
+  width: 100%;
+  height: 60%; 
+  object-fit: cover;
+  border-radius: 4px;
 }
 
+/* Tabela da página inicial */
+
+.tabela {
+  display: inline-block;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 15px;
+
+}
+
+.titulo-tabela {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border-bottom: 1px solid;
+  padding: 5px 23px 5px 23px;
+}
