@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Contato</title>
 </head>
 <body>
-    
+    <div class="container-contato">
+        <header>
+            <nav class="nav-inicio">
+                <ul class="itens-inicio">
+                    <a href="/index.html"><li>Início</li></a>
+                    <a href="/pages/forum.html"><li>Fórum</li></a>
+                    <a href="/pages/nossoPrograma.html"><li>Nosso programa</li></a>
+                    <a href="/pages/sobre.html"><li>Sobre</li></a>
+                </ul>
+            </nav>
+        </header>
+        <div class="formulario">
+            <h2>Envie para nós uma mensagem</h2>
+            <form method="get">
+                <input type="text" name="name" id="name" placeholder="Nome">
+                <input type="text" name="phone" id="phone" placeholder="81999999999">
+                <textarea name="text" id="text"></textarea>
+                <button onclick="enviar()">Enviar</button>
+            </form>
+        </div>
+        
+    </div>
+    <script src="/main.js"></script>
 </body>
 </html>
