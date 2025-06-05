@@ -16,7 +16,7 @@
 
 header{
   grid-area: header;
-  background: #333;
+  background: #8B5CF6;
   color: white;
   padding: 20px;
   
@@ -44,16 +44,24 @@ a {
 
 .template {
   grid-area: template;
-  background: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  background: #F8F9FA;
   padding: 20px;
 }
 
 footer {
   grid-area: footer;
-  background: #333;
+  background: #8B5CF6;
   color: white;
   padding: 20px;
-  text-align: center;
+}
+
+.contato-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 /* asides e cards página inicial */
@@ -78,9 +86,10 @@ footer {
 
 .template-depressao,
 .template-ansiedade {
-  background: #eaeaea;
+  background: #F8F9FA;
   padding: 20px;
-
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .container-minicard-depressao,
@@ -94,13 +103,16 @@ footer {
 
 .minicard-sintomas-depressao,
 .minicard-sintomas-ansiedade {
-  background: #949292;
+  background: #FDFDFD;
+  color: #8B5CF6;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 8px;
   overflow: hidden;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .img-minicard-sintomas-depressao,
@@ -111,13 +123,45 @@ footer {
   border-radius: 4px;
 }
 
-/* Tabela da página inicial */
+.botao-inicio,
+.botao-tabela {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  background-color: #8B5CF6;
+  color: white;
+  padding: 8px;
+  border-radius: 15px;
+  border: none;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.site-governo > * {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* página da tabela */
+
+.container-tabela{
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
 
 .tabela {
-  display: inline-block;
-  background-color: aqua;
+  background-color: #FDFDFD;
   padding: 10px;
   border-radius: 15px;
+  width: 60%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -134,6 +178,30 @@ table {
 table th, table td {
   border-bottom: 1px solid;
   padding: 5px 23px 5px 23px;
+}
+
+/* estlização da página sobre mim */
+
+.container-sobre-mim{
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
+
+.card-sobre-mim {
+  background-color: #FDFDFD;
+  padding: 30px;
+  border-radius: 15px;
+  width: 60%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-sobre-mim > * {
+  padding-top: 10px;
 }
 
 /* estilização da página sobre */
@@ -154,7 +222,6 @@ table th, table td {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid green;
 }
 
 .aside-img-sobre > * {
@@ -167,7 +234,6 @@ table th, table td {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  border: 2px solid blue;
 }
 
 .aside-info-sobre > * {
@@ -207,4 +273,111 @@ form {
 
 form > * {
   margin-bottom: 20px;
+}
+
+/* estilização da página fórum */
+
+.container-forum {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "forum";
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.forum {
+  grid-area: forum;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  
+}
+
+.forum > .card-forum {
+  width: 66%;
+  max-width: 800px;
+  background-color: #FDFDFD;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icones-forum {
+  display: flex;
+  margin-left: 15px;
+  gap: 15px;
+}
+
+.card-forum > * {
+  padding: 10px;
+}
+
+/* estilização da página nosso programa */
+
+.container-nosso-programa {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "texto-nosso-programa";
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.texto-nosso-programa {
+  grid-area: texto-nosso-programa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-nosso-programa > * {
+  width: 66%;
+  max-width: 800px;
+  padding: 1em;
+}
+
+/* estlização página tópico */
+
+.container-topico {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-topico > * {
+  margin-top: 15px;
+}
+
+.enviar {
+  background-color: #8B5CF6;
+  color: white;
+  padding: 8px;
+  border-radius: 15px;
+  border: none;
+  width: 200px;
+  margin-top: 10px;
+}
+
+/* estilização da página recomendação */
+
+.container-recursos {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.container-recursos > * {
+  margin-top: 15px;
 }
